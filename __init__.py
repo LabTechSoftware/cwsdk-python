@@ -5,22 +5,22 @@ import pprint
 
 '''
 
-    from cwsdk import Reporting
+from cwsdk import Reporting
 
-    # Config should look something like this:
-    CW_CONFIG = {
-        'domain': 'my.instance.com',
-        'CompanyId': 'somecompany',
-        'IntegratorLoginId': 'admin',
-        'IntegratorPassword': 'a4353^#gsdfgdin'
-    }
+# Config should look something like this:
+CW_CONFIG = {
+    'domain': 'my.instance.com',
+    'CompanyId': 'somecompany',
+    'IntegratorLoginId': 'admin',
+    'IntegratorPassword': 'a4353^#gsdfgdin'
+}
 
 
-    cwReporting = Reporting(CW_CONFIG)
+cwReporting = Reporting(CW_CONFIG)
 
-    results = cwReporting.RunReportQuery('Contact'))
+results = cwReporting.RunReportQuery('Contact'))
 
-    print results
+print results
 
 '''
 
@@ -39,6 +39,8 @@ class ConnectWiseSDK:
     client = {}
 
     def __init__(self, config={}):
+
+        # if your going to extent this class you have to specify which api your make a class for bro!
         if self.api == '':
             raise Exception("ConnectWise SDK Internal: Please specify  an api endpoint in your class")
 
